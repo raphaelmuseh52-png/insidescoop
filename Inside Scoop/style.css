@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #1a2e40;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #1a2e40;
+}
+
+.brand-logo-img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1a2e40;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+nav ul li a:hover { color: #e5c63d; }
+
+.hero {
+    background-color: #ffdd44;
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+.hero h1 { font-size: 42px; font-weight: 800; color: #1a2e40; margin-bottom: 15px; }
+.hero p { font-size: 18px; color: #1a2e40; margin-bottom: 30px; font-weight: 500; }
+.hero-btn {
+    background: #ffffff;
+    color: #1a2e40;
+    padding: 12px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 50px;
+    border: 2px solid #1a2e40;
+}
+
+.info-section { text-align: center; padding: 50px 20px 10px 20px; }
+.info-section h2 { font-size: 32px; font-weight: 800; color: #1a2e40; }
+.student-promo-banner {
+    display: inline-block;
+    background: #f1f5f9;
+    border-left: 4px solid #1a2e40;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 4px;
+    text-align: left;
+}
+.student-promo-banner p { font-size: 14px; color: #1a2e40; }
+.student-promo-banner span { font-size: 12px; color: #64748b; font-weight: 500; }
+
+/* GRID DINAMIK MENU */
+.perisa-section { padding: 30px 10%; }
+.flavors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.flavor-card {
+    background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0;
+    overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;
+}
+.special-collab { border: 2px solid #ef4444; }
+.flavor-img-container { background: #f8fafc; height: 200px; display: flex; justify-content: center; align-items: center; }
+.flavor-img { max-height: 80%; max-width: 80%; object-fit: contain; }
+.card-details { padding: 20px; flex-grow: 1; }
+.flavor-tag { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-bottom: 5px; }
+.flavor-tag.collab { color: #ef4444; }
+.card-details h3 { font-size: 19px; font-weight: 700; margin-bottom: 8px; color: #1a2e40; }
+.card-details p { font-size: 13px; color: #64748b; line-height: 1.5; min-height: 40px; }
+
+.selection-box { margin-top: 15px; }
+.selector-title { font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 6px; text-transform: uppercase; }
+.toggle-options { display: flex; gap: 8px; }
+.toggle-btn {
+    flex: 1; background: #ffffff; border: 1px solid #cbd5e1;
+    padding: 8px; font-family: 'Montserrat', sans-serif;
+    font-size: 12px; font-weight: 600; border-radius: 6px; cursor: pointer; color: #64748b;
+}
+.toggle-btn.active { background: #1a2e40; color: white; border-color: #1a2e40; }
+
+/* KOTAK SELEKSI GAMBAR CUP */
+.cup-image-selector { margin-top: 15px; padding-top: 12px; border-top: 1px dashed #e2e8f0; }
+.cup-options { display: flex; gap: 10px; }
+.cup-option {
+    flex: 1; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px;
+    padding: 8px; display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer;
+    transition: all 0.2s;
+}
+.cup-option img { width: 50px; height: 50px; object-fit: contain; pointer-events: none;}
+.cup-option span { font-size: 11px; font-weight: 700; color: #64748b; }
+.cup-option:hover { border-color: #cbd5e1; background: #f1f5f9; }
+.cup-option.active { border-color: #ffdd44; background: #ffffea; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.cup-option.active span { color: #1a2e40; }
+
+.price-row { padding: 15px 20px; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+.price { font-weight: 800; font-size: 18px; color: #1a2e40; }
+.add-to-cart-btn { background: #ffdd44; border: none; padding: 10px 18px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; border-radius: 6px; cursor: pointer; }
+.add-to-cart-btn:hover { background: #e5c63d; }
+
+.cart-section { padding: 40px 10%; background: #fafafa; border-top: 1px solid #eee; }
+.cart-container { display: grid; grid-template-columns: 1.4fr 1fr; gap: 30px; }
+.cart-items-box, .cart-summary-box { background: white; padding: 25px; border-radius: 8px; border: 1px solid #eee; }
+.cart-items-box h4, .cart-summary-box h4 { margin-bottom: 15px; font-weight: 700; font-size: 16px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;}
+#cart-empty-message { color: #94a3b8; font-size: 13px; }
+#cart-items-list { list-style: none; }
+#cart-items-list li { display: flex; justify-content: space-between; font-size: 13px; padding: 8px 0; border-bottom: 1px solid #f8fafc; }
+.summary-line { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; margin: 15px 0; }
+.checkout-btn { width: 100%; background: #1a2e40; color: white; border: none; padding: 14px; font-weight: 700; border-radius: 6px; cursor: pointer; font-size: 14px; }
+
+/* LIGHTBOX */
+.popup-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center;
+    z-index: 9999; opacity: 0; pointer-events: none; transition: 0.2s;
+}
+.popup-modal.show-popup { opacity: 1; pointer-events: auto; }
+.popup-modal-content { background: white; padding: 25px; border-radius: 12px; max-width: 360px; width: 90%; text-align: center; position: relative; }
+.popup-modal-content img { width: 200px; height: 200px; object-fit: contain; margin: 15px 0; }
+.popup-close-btn { position: absolute; top: 5px; right: 15px; font-size: 26px; cursor: pointer; color: #94a3b8; }
+
+/* MODAL RESIT BAUCAR */
+.receipt-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 10000;
+}
+.receipt-content { background: white; padding: 30px; border-radius: 16px; max-width: 440px; width: 90%; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+.receipt-icon { font-size: 45px; margin-bottom: 10px; }
+
+.success-voucher-box { background: #fff5f5; border: 2px dashed #feb2b2; padding: 20px; border-radius: 12px; margin-top: 20px; }
+.success-voucher-box h5 { color: #e53e3e; font-weight: 800; font-size: 15px; margin-bottom: 5px; }
+
+.voucher-image-container { background: #ffffff; padding: 8px; border: 1px solid #e2e8f0; border-radius: 8px; margin: 15px 0; }
+.voucher-image-container img { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; border-radius: 6px; }
+
+.download-voucher-btn { display: inline-block; background: #e53e3e; color: white; text-decoration: none; padding: 10px 20px; font-size: 13px; font-weight: 700; border-radius: 6px; margin-top: 5px; cursor: pointer; font-family: 'Montserrat', sans-serif; }
+.download-voucher-btn:hover { background: #c53030; }
+
+.close-receipt-btn { background: #1a2e40; color: white; border: none; padding: 11px 30px; border-radius: 6px; font-weight: 700; cursor: pointer; margin-top: 20px; font-family: 'Montserrat'; }
+.hidden { display: none !important; }
+
+.lokasi-section { padding: 40px 10%; text-align: center; }
+.lokasi-section h2 { margin-bottom: 20px; font-weight: 800; }
+.lokasi-grid { display: flex; gap: 20px; justify-content: center; }
+.outlet-item { padding: 20px; background: #f8fafc; border-radius: 8px; flex: 1; max-width: 300px; text-align: left; border: 1px solid #e2e8f0;}
+footer { background: #1a2e40; color: #ffffff; text-align: center; padding: 20px; font-size: 13px; }
